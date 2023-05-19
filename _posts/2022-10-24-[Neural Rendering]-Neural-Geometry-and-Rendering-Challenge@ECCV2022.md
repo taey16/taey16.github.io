@@ -8,4 +8,3 @@ We were take part in the NGR-CO3D challenge hosted from ECCV2022. As a result, w
 </p>
 
 #### Our Approach
-
