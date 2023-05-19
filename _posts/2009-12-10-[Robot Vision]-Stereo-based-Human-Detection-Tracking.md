@@ -7,4 +7,4 @@ By RGB-D sensory inputs, we design 4 directional 2D elliptical filters (4D2DEFs)
 Robot Vision, Human Detection/Tracking
 
 To get further details, check out our paper: <br>
-[Pose Robust Human Detection in Depth Image Using Four Directional 2D Elliptical Filters](https://github.com/taey16/taey16.github.io/blob/main/assets/papers/2009_PoseRobustHumanDetectionInDepthImage.pdf), IEEE ISM, 2009
+<a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/papers/2009_PoseRobustHumanDetectionInDepthImage.pdf">Pose Robust Human Detection in Depth Image Using Four Directional 2D Elliptical Filters</a>, IEEE ISM, 2009

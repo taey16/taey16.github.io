@@ -7,4 +7,5 @@ Although many variants of local binary patterns (LBP) are widely used for face a
 Local Binary Pattern, Feature Selection, Compact LBP, Maximization of Mutual Information
 
 To get further details, check out our paper: <br>
-[A compact local binary pattern using maximization of mutual information for face analysis](https://github.com/taey16/taey16.github.io/blob/main/assets/papers/PR_taewan_090709/2010_CLBP_pr.pdf), Pattern Recognition, 2010
+<a href=
+"https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/papers/PR_taewan_090709/2010_CLBP_pr.pdf">A compact local binary pattern using maximization of mutual information for face analysis</a>, Pattern Recognition, 2010
