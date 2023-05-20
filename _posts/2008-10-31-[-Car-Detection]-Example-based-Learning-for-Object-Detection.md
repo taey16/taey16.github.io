@@ -1,4 +1,4 @@
-## Realtime Stereo-based Human Detection and Tracking for Robot-Vision.
+## Example based Learning for Object Detection in Images
 
 ### Introduction
 In this paper, we describe a general learning architecture for object detection especially car detection. In order to build such a system, we first perform dimension reduction
