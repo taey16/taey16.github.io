@@ -22,7 +22,7 @@ We employed a simple ensemble representation of an object with the NeRF and Tens
 
 
 #### Quantitative Results
-Until the evaluation server shutdown, we slightly but granularly imporved the performance of our method.
+Until the evaluation server shut down, we slightly but granularly imporved the performance of our method.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/quantitative_result.png" class="inline"/>
