@@ -28,7 +28,7 @@ Until the evaluation server shutdown, we slightly but granularly imporved the pe
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/quantitative_result.png" class="inline"/>
 </p>
 
-#### Keywords: <br>
+#### Keywords:
 Neural Rendering, Neural Radiance Field (NeRF), Tensorial Radiance Field (TensoRF), Implicit Volume Rendering, Novel-View Synthesis
 
 Check out our presentation slides: 
