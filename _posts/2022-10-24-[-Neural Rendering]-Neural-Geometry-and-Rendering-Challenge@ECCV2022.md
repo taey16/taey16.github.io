@@ -6,4 +6,7 @@ We took part in the NGR-CO3D challenge hosted by ECCV2022. As a result, we place
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/CO3D_Multiview_centificate.png" class="inline"/>
 </p>
 
+#### Task Definition
+Given a sequence of RGB images, ROI-masks and camera-poses, one's algorithm outputs appearance (RGB), depth-map, and ROI-mask for a given test camera poses for total 88 video sequences in total.
+
 #### Our Approach
