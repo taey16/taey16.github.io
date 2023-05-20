@@ -15,7 +15,7 @@ Just take a video, and then upload it to us somthing like that:
 Our solution automatically process end-user's video, and then provide an experience that browse their scenes in 3D (click below): 
 
 [![test5](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test5_thumb.png)](https://drive.google.com/file/d/13ul2QUZQqrxA7fv08BoD_UDuJmsoGGc7/view?usp=share_link)
-(A showcase video order in novel-view RGB, Depth, and Surface-normal.)
+(Order in novel-view RGB, Depth, and Surface-normal.)
 
 #### Keywords:
 Neural Rendering, Neural Radiance Field (NeRF), Visual Effect Studio, 3D Reconstruction
