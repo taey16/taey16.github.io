@@ -1,7 +1,8 @@
 ### 3D Scene Reconstruction System for given End-User Videos.
 
-*"Do you have any moment to remember forever?? Just take a video. Our AI-powered solution put your moment in a virtual 3D world permanently."*<br>
-Thanks to an experience partipating the NGR-CO3D challenge, we got started to developing an automatic AI-driven 3D scene reconstruction system for end-users. Here we describe resulting prototype.
+*"Do you have any moment to remember forever? Just take a video. Our AI-powered solution brings your moment into a virtual 3D world permanently."*
+
+Thanks to an experience participating in the NGR-CO3D challenge, we started developing an automatic AI-driven 3D scene reconstruction system for end-users. Here we describe the resulting prototype.
 
 #### Inputs
 Just take a video, and then upload it to us somthing like that:
