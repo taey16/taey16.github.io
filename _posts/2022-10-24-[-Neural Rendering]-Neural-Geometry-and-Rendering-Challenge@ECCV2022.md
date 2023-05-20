@@ -28,8 +28,17 @@ Until the evaluation server shutdown, we slightly but granularly imporved the pe
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/quantitative_result.png" class="inline"/>
 </p>
 
+#### Qualitative Results
+Here are showcases of our novel-view synthesis (order in predicted RGB, Depth, and ROI).
+
+[![bench](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/bench_thumb.png)](https://drive.google.com/file/d/1XBORqxUR90m33DCLfnBTW8hJNXW4W_Z4/view?usp=share_link)
+[![teddybear](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/teddybear_thumb.png)](https://drive.google.com/file/d/16a68fUKk4bSAdcjlUbs1oX3r3kiWbFnZ/view?usp=share_link)
+[![toytrain](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/toytrain_thumb.png)](https://drive.google.com/file/d/1r_AKOPpFJJPcOle33hHel8DsoxDbHIBX/view?usp=share_link)
+
+
 #### Keywords:
 Neural Rendering, Neural Radiance Field (NeRF), Tensorial Radiance Field (TensoRF), Implicit Volume Rendering, Novel-View Synthesis
+
 
 Check out our presentation slides: 
 <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/NGR_CO3D_ECCV2022.pdf">InvitedTalk_winning_entry_manyview</a>, NGR-CO3D@ECCV, 2022
