@@ -18,7 +18,7 @@ The WebFace260M dataset is composed of more than 2 million classes, and 0.26 bil
 For further speed-up and the highest peak memory reduction during training, the micro-batching, checkpoing, automatic mixed precision, and ZeRO optimizer, etc. were utilized, if necessary.
 
 ##### Feature Distillation
-To improve face recognition performance, we adopted the feature distillation method. Specifically, we first trained a teacher network (our ResNet1200 network) in advance. and conduct to train our student network with a convex combination of the supervised cross entropy loss and unsupervised teacher distillation loss. Performaces of train-scratch (denoted as red)  and train-distill (denoted as blue) are shown below.
+To improve face recognition performance, we adopted the feature distillation method. Specifically, we first trained a teacher network (our ResNet1200 network) in advance. and conduct to train our student network with a convex combination of the supervised cross entropy loss and unsupervised teacher distillation loss. Performances of train-scratch (denoted as red)  and train-distill (denoted as blue) are shown below.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/MFR_ICCV2021/distill_vs_scratch.png" class="inline"/>
