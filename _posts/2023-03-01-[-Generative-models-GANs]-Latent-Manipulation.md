@@ -9,7 +9,12 @@ We trained our own generator, i.e. a variant of StyleGAN's mapper and synthesize
 (click above and make sure full-screen mode)
 
 #### Various Face-related attributes Manipulation
-Steerable attributes we trained are geometry, lighting, age, gender, race, glasses, hat, makeup, facial expression, etc. Here we showcase various face-related attributes manipulation from our trained generator and manipulator.
+We defined three stages to edit latents:
+- Sampling: A stage that samples z, w, w+, and image.
+- Inversion: Optional stage for conditioning on a given image. If there is an input image we want to edit, we first apply inversion from the image to get a style-latent w+.
+- Editing: Manipulating the latent vector acquired from the previous stage. In this stage, we adopt a flow-based (i.e. StyleFlow), driving prompt-based (CLIP and LAION) editing. Note that not only editing a latent vector but fine-tuning our synthesizer as well, if necessary.
+
+Steerable attributes we trained are geometry, lighting, age, gender, race, glasses, hat, makeup, facial expression, etc. Here we showcase various face-related attributes manipulation from our trained generator and manipulator. The key is that face identity must not be changed when conducting editing.
 
 - Geometry (Yaw, Pitch)
 
