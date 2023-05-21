@@ -55,6 +55,8 @@ Here we showcase various face-related attributes manipulation from our trained g
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/stylegan/makeup.png" width="512" height="256">
 </p>
 
+- ,and so on ...
+
 #### Face-Attribute Dataset Generation
 The latent manipulation technique can be extended to generate **face-attributes dataset**. For example, we can generate various face images with all wearing glasses and closing their eyes. Other example is results of generating male's faces. (Red rectangles denote mis-generated images.
 
