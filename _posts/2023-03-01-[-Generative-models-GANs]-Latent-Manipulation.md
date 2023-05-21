@@ -64,6 +64,8 @@ The latent manipulation technique can be extended to **generate a face-attribute
 - Steered attributes: wearing a glasses, closed eyes
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/stylegan/glasses_closed_eyes.png">
+</p>
+
 - Steered attributes: Male
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/stylegan/male_only.png">
