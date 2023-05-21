@@ -59,7 +59,7 @@ Steerable attributes we trained are geometry, lighting, age, gender, race, glass
 - ,and so on ...
 
 #### Face-Attribute Dataset Generation
-The latent manipulation technique can be extended to **generate a face-attributes dataset**. For example, we can generate various face images with all wearing glasses and closing their eyes. Another example is results of generating male faces. (Red rectangles denote mis-generated images.
+The latent manipulation technique can be extended to **generate a face-attributes dataset**. For example, we can generate various face images with all wearing glasses and closing their eyes. Another example is results of generating male faces. (Red rectangles denote mis-generated images).
 
 - Steered attributes: wearing a glasses, closed eyes
 <p align="center">
