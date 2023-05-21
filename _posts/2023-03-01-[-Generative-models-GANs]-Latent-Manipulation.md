@@ -1,4 +1,4 @@
-### Manipulating Face Latent
+### Manipulating Latent vectors
 
 In this project, we trained StyleGAN generator and manipulated the latent space of the generator.
 
