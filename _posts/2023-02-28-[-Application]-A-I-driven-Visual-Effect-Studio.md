@@ -12,9 +12,9 @@ Just take a video, and then upload it to us something like that:
 </p>
 
 #### Outputs
-Our solution automatically processes end-users videos, and then provides an experience that the end-users browse their scenes in 3D (click below): 
+Our solution automatically processes end-users videos, and then provides an experience where the end-users browse their scenes in 3D (click below): 
 
-Outputs: novel-view RGB, Depth, and Surface-normal
+Order in novel-view RGB, Depth, and Surface-normal
 
 One's favorite Car
 [![test5](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test5_thumb.png)](https://drive.google.com/file/d/13ul2QUZQqrxA7fv08BoD_UDuJmsoGGc7/view?usp=share_link)
