@@ -20,7 +20,7 @@ title                    : "Taewan Ethan Kim's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Taewan Ethan Kim"
-description              : "A research enthusiast"
+description              : "A research scientist"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,13 +106,13 @@ analytics:
 author:
   name             : "Taewan Ethan Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A research enthusiast"
+  bio              : "A research scientist<br>GenerativeAI<br>GAN/Diffusion based Generative Models<br>Implicit/Explicit Nueral Rendering<br>Vision-Multimodal Learning"
   location         : "Pan-Gyo, South Korea"
   email            :
   links:
-    - label: "Email"
+    - label: "Email: taey1600__AT__gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:taey1600@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
