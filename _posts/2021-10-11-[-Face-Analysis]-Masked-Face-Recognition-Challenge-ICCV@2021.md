@@ -33,4 +33,4 @@ Ref.: https://competitions.codalab.org/competitions/32478#results
 
 #### Check out for furthers
 Tech Note: <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/MFR_ICCV2021/MFR_ICCV2021_Report_ethan.pdf">Technical Details of our submissions of MFR-ICCV2021 Challenge, WebFace260M Track</a> <br>
-Slide: <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/MFR_ICCV2021/MFR_ICCV2021_Slide_ethan.pdf">InvitedTalk_slide_workshop</a>
+Slide: <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/MFR_ICCV2021/MFR_ICCV2021_Slide_ethan.pdf">InvitedTalk_slide_workshop</a>, MFR Challenge & Workshop, ICCV, 2021
