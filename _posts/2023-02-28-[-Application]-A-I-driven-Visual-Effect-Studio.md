@@ -12,7 +12,7 @@ Just take a video, and then upload it to us somthing like that:
 </p>
 
 #### Outputs
-Our solution automatically process end-user's video, and then provide an experience that browse their scenes in 3D (click below): 
+Our solution automatically process end-user's video, and then provide an experience that the end-users browse their scenes in 3D (click below): 
 
 Outputs: novel-view RGB, Depth, and Surface-normal
 
