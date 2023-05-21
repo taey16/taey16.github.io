@@ -5,14 +5,14 @@
 Thanks to an experience participating in the NGR-CO3D challenge, we started developing an automatic AI-driven 3D scene reconstruction system for end-users. Here we describe the resulting prototype.
 
 #### Inputs
-Just take a video, and then upload it to us somthing like that:
+Just take a video, and then upload it to us something like that:
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/car_seq.png" class="inline"/>
 </p>
 
 #### Outputs
-Our solution automatically process end-user's video, and then provide an experience that the end-users browse their scenes in 3D (click below): 
+Our solution automatically processes end-users videos, and then provides an experience that the end-users browse their scenes in 3D (click below): 
 
 Outputs: novel-view RGB, Depth, and Surface-normal
 
@@ -32,12 +32,12 @@ After finishing train our model, we can extract a 3D mesh (via marching-cube alg
 #### System Building Blocks
 Our system consists of major three stages i.e. 1) Automatic Dataset Building, 2) Training, and 3) Eval.
 - Automatic Dataset Building<br>
--- Our solution splits an input video into N number of frames, and then execute an off-the-shelf Structure-from-Motion (SfM) package (COLMAP in our case) to estimate camera-to-world pose parameters, i.e. camera intrinsics (focal length, principle point, and distortion) and extrinsics (camera rotation and translation). <br>
--- Miscellaneous information also accquired by pretrained vision networks, e.g., semantic segmentation mask, face parsing mask etc. 
+-- Our solution splits an input video into N number of frames and then executes an off-the-shelf Structure-from-Motion (SfM) package (COLMAP in our case) to estimate camera-to-world pose parameters, i.e., camera intrinsic (focal length, principle point, and distortion) and extrinsic (camera rotation and translation). <br>
+-- Miscellaneous information is also acquired by pre-trained vision networks, e.g., semantic segmentation mask, face parsing mask, etc. 
 - Train<br>
--- Our Implicit Neural Network is trained for the train-datasets built by previous stage.
+-- Our Implicit Neural Network is trained for the train datasets built by the previous stage.
 - Eval<br>
--- Given trained implicit renderer, ray-sampler, and train-dataset, we compose a virtual camera trajectory for novel-view synthesis in off-line.
+-- Given a trained implicit renderer, ray-sampler, and train dataset, we compose a virtual camera trajectory for novel-view synthesis off-line.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/building_block.png" class="inline"/>
