@@ -23,7 +23,7 @@ Clothes
 Object
 [![test7](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test7_thumb.png)](https://drive.google.com/file/d/1DPaCDI4Zn2paZ7SyyUiCvRp3XPm2AvaY/view?usp=share_link)
 
-After finishing train our model, we can extract a 3D mesh (via marching-cube algorithm):
+After finishing train our model, we can extract a 3D mesh via marching-cube algorithm (click below):
 
 [![test5_mesh](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test5_mesh_thumb.png)](https://drive.google.com/file/d/1biIsZi_UN2SNJxQMQh6tDJdYRmQSeGsg/view?usp=share_link)
 [![chair_mesh](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/chair_mesh_thumb.png)](https://drive.google.com/file/d/13iyRp7lueqUXM7Ww3XbrfbqovyH2gyFr/view?usp=share_link)
