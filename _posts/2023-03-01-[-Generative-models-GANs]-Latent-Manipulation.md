@@ -1,15 +1,16 @@
 ### Manipulating Latent vectors
 
-In this project, we trained StyleGAN generator and manipulated the latent space of the generator.
+In this project, we trained the StyleGAN generator and manipulated the latent space of the generator.
 
-#### Interplolating *face identities* and corresponding *Non Adverserial Domain Adeptation (NADA)*
-We trained our own generator, i.e. a variant of StyleGAN's mapper and synthesizer, and then interpolates randomly sampled latent vectors. In addition, we applied StyleGAN-NADA apporach whose driving prompts are *"character"*, *"caricature"*, *characture*, *"dc comics"*, *"marvel comics"*, and *"disney 3D"*.
+#### Interpolating *face identities* and corresponding *Non-Adversarial Domain Adaptation (NADA)*
+We trained our own generator, i.e. a variant of StyleGAN's mapper and synthesizer, and then interpolates randomly sampled latent vectors. In addition, we applied the StyleGAN-NADA approach where driving prompts are *"character"*, *"caricature"*, *characture*, *"dc comics"*, *"marvel comics"*, and *"disney 3D"*.
 
 [![test0](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/stylegan/identity_stylegan_nada_thumb.png)](https://drive.google.com/file/d/1OjoZBTvdC-LYyKCw8IBT60k4ZKAIv2Uc/view?usp=sharing)
 (click above and make sure full-screen mode)
 
 #### Various Face-related attributes Manipulation
-Here we showcase various face-related attributes manipulation from our trained generator.
+Steerable attributes we trained are geometry, lighting, age, gender, race, glasses, hat, makeup, facial expression, etc. Here we showcase various face-related attributes manipulation from our trained generator and manipulator.
+
 - Geometry (Yaw, Pitch)
 
 <p align="center">
@@ -58,7 +59,7 @@ Here we showcase various face-related attributes manipulation from our trained g
 - ,and so on ...
 
 #### Face-Attribute Dataset Generation
-The latent manipulation technique can be extended to **generate face-attributes dataset**. For example, we can generate various face images with all wearing glasses and closing their eyes. Other example is results of generating male's faces. (Red rectangles denote mis-generated images.
+The latent manipulation technique can be extended to **generate a face-attributes dataset**. For example, we can generate various face images with all wearing glasses and closing their eyes. Another example is results of generating male faces. (Red rectangles denote mis-generated images.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/stylegan/glasses_closed_eyes.png">
