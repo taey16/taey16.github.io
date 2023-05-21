@@ -27,6 +27,7 @@ After finishing train our model, we can extract a 3D mesh (via marching-cube alg
 
 [![test5_mesh](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test5_mesh_thumb.png)](https://drive.google.com/file/d/1biIsZi_UN2SNJxQMQh6tDJdYRmQSeGsg/view?usp=share_link)
 [![chair_mesh](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/chair_mesh_thumb.png)](https://drive.google.com/file/d/13iyRp7lueqUXM7Ww3XbrfbqovyH2gyFr/view?usp=share_link)
+[![mic_mesh](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/mic_thumb.png)](https://drive.google.com/file/d/1SwMl1DWMnUuWHq8yjyyITXe3QmTsLNLj/view?usp=share_link)
 (To render these extracted meshes, we used blender's EEVEE rendering engin.)
 
 #### System Building Blocks
