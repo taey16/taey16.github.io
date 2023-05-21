@@ -9,7 +9,7 @@ Given the training dataset, i.e., WebFace260M, one's algorithm has to learn a go
 #### Apporoach
 
 ##### Large-Scale Multi-node/Multi-gpu Distributed Training
-The WebFace260M dataset is composed of more than 2 million classes, and 0.26 billion face images. To train on this dataset, it is infeasible to train with a plain cross-entropy loss, due to its huge amount of classes. To address this, we employed Model-Parallelism for the classification head, and Multi-Node, Multi-GPU Distributed Data Parallelism for the feature-extraction network, respectively. The former is dedicated to reducing the highest peak GPU memory consumption, and the latter is for fast convergence during training (See below). 
+The WebFace260M dataset is composed of more than 2 million classes, and 0.26 billion face images. To train on this dataset, it is infeasible to train with a plain cross-entropy loss, due to its huge amount of classes. To address this, we employed Model-Parallelism for the classification head, and Data Parallelism for the feature-extraction network, respectively. The former is dedicated to reducing the highest peak GPU memory consumption, and the latter is for fast convergence during training (See below). 
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/MFR_ICCV2021/ddp_mp.png" class="inline"/>
