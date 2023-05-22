@@ -49,10 +49,10 @@ Note that distributions of $$ x_0, x_T $$ are known in this case, we can easily 
 
 \begin{align}
 \label{computediffusionforward}
-    q(x_{t+1}|x_{T}, x_0) = \sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T
+    q(x_{t+1}|x_{T}, x_0) = \sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T,
 \end{align}
 
-Inherited by the PGM, the reverse diffusion process (the generation process parameterized by $$ \theta $$), which finds a likelihood 
+where $$ \alpha_t $$ is a constant at $$ t $$, induced by a beta-scheduler (*"linear scheduler"* in a common choice). Inherited by the PGM, the reverse diffusion process (the generation process parameterized by $$ \theta $$), which finds a likelihood 
 
 $$ q_{\theta}(x_0|x_1, x_2, \cdots, x_T) $$ 
 
