@@ -25,10 +25,8 @@ https://www.fabriziomusacchio.com/blog/2021-08-10-How_to_use_LaTeX_in_Markdown/
   });
 </script>
 
-### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
-
 #### Introduction
-As far as we know, discriminative models always required a large amount of labeled data in general. The deep learning success in previous decay is also based on labor-intensive curated annotations and crawled images for training. Nowadays, there exist few research works to overcome the need for composing a training dataset manually, but their success is limited. We got started ice-breaking such a limitation. We hypothesize that if we can generate a sample from $$ p_{\theta}(x) $$ without error, then a performance of a trained discriminative model on synthetically generated samples meets that of the counterpart model trained on real data. By referring to the current notable improvement to mimic sampling on true distribution with Diffusion Probabilistic Model (DPM), we adopted the DPM to generate a training dataset for recognition. 
+As far as we know, discriminative models always require a large amount of labeled data in general. The deep learning success in previous decay is also based on labor-intensive curated annotations and crawled images for training. Nowadays, there exist few research works to overcome the need for composing a training dataset manually, but their success is limited. We got started ice-breaking such a limitation. We hypothesize that if we can generate a sample from $$ p_{\theta}(x) $$ without error, then a performance of a trained discriminative model on synthetically generated samples meets that of the counterpart model trained on real data. By referring to the current notable improvement to mimic sampling on true distribution with Diffusion Probabilistic Model (DPM), we adopted the DPM to generate a training dataset for recognition. 
 
 #### Latent Variable Models (LVMs), and Diffusion Probabilistic Models (DPMs)
 Inspired by the diffusion (Brownian motion) as a natural phenomenon in thermodynamics, the diffusion process can be modeled as finding a posterior as the time-introducing LVMs, 
@@ -175,9 +173,10 @@ $$
 
 where $$w$$ is a guidance-scale constant. In this case, we could plug the QKV attention module of the Stable-Diffusion into the term, $$\epsilon_{\theta}(x_t, c)$$ to implement. **We utilized them to implement our dataset generation for a recognition task**.
 
+#### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
 
 
-**I'm sorry but I do not complete this post. Please stay tuned. It will be filled completely in the near future.** 
+**I'm sorry but I didn't have an enough time to complete this post. Please stay tuned. It will be filled completely in the near future.** 
 
 #### Keywords:
-Diffusion Probabilistic Models (DPMs), (conditional) Latent Diffusion Models (cLDMs), Classifier-Free Guidance (CFG), Dataset Generation
+Diffusion Probabilistic Models (DPMs), conditional Diffusion Probabilistic Models (cDPMs), Latent Diffusion Models (LDMs), Classifier-Free Guidance (CFG), Dataset Generation
