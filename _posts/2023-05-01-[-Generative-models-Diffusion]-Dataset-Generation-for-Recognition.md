@@ -97,7 +97,7 @@ $$
 \end{equation}
 $$
 </p>
-which regared to as the *"input-output reversed"* equation of Eq.[$$\ref{computediffusionforward} $$], i.e. $$ q_{\theta}(x_0 | x_t, x_T) $$. Here, $$ x_T  $$ is the output of our $$ \epsilon $$-predictor, $$ x_T = \epsilon_{\theta}(x_t) $$, where the $$ x_t $$ is an output for the previous sampling process. 
+which regared to as a *"input-output reversed"* equation of Eq.[$$\ref{computediffusionforward} $$], i.e. $$ q_{\theta}(x_0 | x_t, x_T) $$. Here, $$ x_T  $$ is the output of our $$ \epsilon $$-predictor, $$ x_T = \epsilon_{\theta}(x_t) $$, where the $$ x_t $$ is an output for the previous sampling process. 
 
 
 #### Visualizing intermediate outputs step by step
@@ -175,7 +175,7 @@ where $$w$$ is a guidance-scale constant. In this case, we could plug the QKV at
 
 
 #### Latent Diffsion Models (LDMs)
-The dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of a generated image in common, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture used for reducing the dimensionality of $$x_0$$. Specifically, a sample of $$ x_0 $$ is first pass through the encoder 
+The dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of a generated image in common, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture. Specifically, a sample of $$ x_0 $$ is first pass through the encoder,
 
 $$
     f_{\text{enc}}: \mathbb{R}^{C \times H \times W} \mapsto \mathbb{R}^{C \times H^{\prime} \times W^{\prime}}, \text{where } H \gg H^{\prime}, W \gg W^{\prime},
@@ -186,8 +186,9 @@ is used. **We employed the LDM to implement our dataset generation for a recogni
 
 #### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
 
-
+<!--
 **I'm sorry but I didn't have an enough time to complete this post. Please stay tuned. It will be filled completely in the near future.** 
+-->
 
 #### Keywords:
 Diffusion Probabilistic Models (DPMs), conditional Diffusion Probabilistic Models (cDPMs), Latent Diffusion Models (LDMs), Classifier-Free Guidance (CFG), Dataset Generation
