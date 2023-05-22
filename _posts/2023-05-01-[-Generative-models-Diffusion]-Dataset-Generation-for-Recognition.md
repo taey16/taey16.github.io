@@ -28,17 +28,17 @@ https://www.fabriziomusacchio.com/blog/2021-08-10-How_to_use_LaTeX_in_Markdown/
 ### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
 
 #### Introduction
-As far as all of we know, discriminative models always required large amount of labeled data in general. The deep learning success in previous decay is also based on labor-intensive currated annotations and crawled images for training. Nowadays, there exist few research works to overcoming a need for composing a training dataset manually, but their success is limited. We got started to ice-breaking such a limitation. Our hypothesis is that if we can generate a sample from $$ p_{\theta}(x) $$ without error, then performance of a trained discriminative model on synthetically generated samples meets that of the counterpart model trained on a real data. By referring current notable improvement to mimic sampling on true distribution with Diffusion Probabilistic Model (DPM), we adopted the DPM to generate training dataset for recognition. 
+As far as we know, discriminative models always required a large amount of labeled data in general. The deep learning success in previous decay is also based on labor-intensive curated annotations and crawled images for training. Nowadays, there exist few research works to overcome the need for composing a training dataset manually, but their success is limited. We got started ice-breaking such a limitation. We hypothesize that if we can generate a sample from $$ p_{\theta}(x) $$ without error, then a performance of a trained discriminative model on synthetically generated samples meets that of the counterpart model trained on real data. By referring to the current notable improvement to mimic sampling on true distribution with Diffusion Probabilistic Model (DPM), we adopted the DPM to generate a training dataset for recognition. 
 
 #### Latent Variable Models (LVMs), and Diffusion Probabilistic Models (DPMs)
-Inspired by the diffusion (Brownian motion) as a natural phenomenon in themodynamics, the diffusion process can be modelled as finding a posterior as the time-introducing LVMs, 
+Inspired by the diffusion (Brownian motion) as a natural phenomenon in thermodynamics, the diffusion process can be modeled as finding a posterior as the time-introducing LVMs, 
 
 \begin{align}
 \label{diffusionforward}
 q(x_{T}, x_{t-1}, \cdots, x_{1}, x_{0}).
 \end{align}
 
-The diffusion process is a special case of the Probablistic Graphical Model (PGM), where distribution of the latent variable is known, such that 
+The diffusion process is a special case of the Probabilistic Graphical Model (PGM), where the distribution of the latent variable is known, such that 
 
 \begin{align}
 \label{samplelatent}
@@ -56,7 +56,7 @@ where $$ \alpha_t $$ is a constant at $$ t $$, induced by a beta-scheduler (*"li
 
 $$ q_{\theta}(x_0|x_1, x_2, \cdots, x_T) $$ 
 
-can be tractable. To solve this reverse process, Denoising Diffusion Probabilistic Model (DDPM) proposes the $$ q_{\theta} $$ as a $$ \epsilon $$-predictor so that a procedure in training is to be dramatically simple (under the markov property):
+can be tractable. To solve this reverse process, Denoising Diffusion Probabilistic Model (DDPM) proposes the $$ q_{\theta} $$ as a $$ \epsilon $$-predictor so that the procedure in training is to be dramatically simple (under the Markov property):
 
 $$
 \begin{equation}
@@ -90,7 +90,7 @@ q(x_{t-1}|x_t, x_0) =
 \end{equation}
 $$
 
-which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe to approximate $$ x_0 $$ such that:
+which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe approximating $$ x_0 $$ such that:
 
 <p align="center">
 $$
@@ -105,21 +105,21 @@ which regared to as the *"input-output reversed"* equation of Eq.[$$\ref{compute
 #### Visualizing intermediate outputs step by step
 
 ##### Forward diffusion process Eq.[$$\ref{computediffusionforward}$$].
-As described above, this forward process can be computed straightforwardly, since we know distribution of our observation, $$ p(x_0) $$, and latent, $$ p(x_T) $$. The right, and left-most images are $$ x_0 $$, and $$ x_T $$, respectively. Remainings are $$ x_t $$.
+As described above, this forward process can be computed straightforwardly, since we know the distribution of our observation, $$ p(x_0) $$, and latent, $$ p(x_T) $$. The right and left-most images are $$ x_0 $$, and $$ x_T $$, respectively. Remainings are $$ x_t $$.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/qt.png">
 </p>
 
 ##### Estimating $$ x_0 $$ in Eq.[$$\ref{approxx0}$$].
-To estimate the $$ x_0 $$, one needs to sample $$ x_{t} $$ which is an output of the previous reverse process in actual sampling (generation) process. However, we can make use of a result of Eq.[$$\ref{computediffusionforward}$$] computed in training for just visualization.
+To estimate the $$ x_0 $$, one needs to sample $$ x_{t} $$ which is an output of the previous reverse process in the actual sampling (generation) process. However, we can make use of a result of Eq.[$$\ref{computediffusionforward}$$] computed in training for just visualization.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/x0.png">
 </p>
 
 ##### Progressive estimatation of Eq.[$$\ref{ddpmsample}$$].
-Following examples are results of the Eq.[$$\ref{ddpmsample}$$]. Samples drawn from the normal distribution (left-most images) are progressively goes to corresponding samples as if they are drawn from true distribution (right-most images).
+The Following examples are results of the Eq.[$$\ref{ddpmsample}$$]. Samples drawn from the normal distribution (left-most images) progressively go to corresponding samples as if they are drawn from the true distribution (right-most images).
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/progressive_actually_qt.png">
