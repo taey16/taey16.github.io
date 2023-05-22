@@ -61,12 +61,12 @@ can be tractable. To solve this reverse process, Denoising Diffusion Probabilist
 $$
 \begin{equation}
 \label{ddpmobjectives}
-L_{\text{simple}} := 
-    E_{t, x_0, x_T} \Big [ \|| 
+\mathcal{L}_{\text{simple}} := 
+    \mathbb{E}_{t, x_0, x_T} \Big [ \|
         x_T - \epsilon_{\theta}(
             \underbrace{\sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T}_{\text{The output of the (forward) diffusion process}}, t
         ) 
-    \||^2 \Big ].
+    \|^2 \Big ].
 \end{equation}
 $$
 
@@ -125,8 +125,35 @@ The Following examples are results of the Eq.[$$\ref{ddpmsample}$$]. Samples dra
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/progressive_actually_qt.png">
 </p>
 
-#### Conditional DPMs
+#### Conditional DPM
+The conditional DPM is a variant of the diffusion process conditioned on the class label, sgementation mask, CLIP/LAION embeddings, etc. We denote these various conditions as a random variable, $$ c $$ (for simplicity), where the true distribution of the random variable, $$ c $$, is known as a part of the observation. Then, previously mentioned Eq.[$$\ref{diffusionforward}$$] changes the form such that
 
+\begin{align}
+\label{cdiffusionforward}
+q(x_{T}, x_{t-1}|c, \cdots, x_{1}|c, x_{0}|c).
+\end{align}
+
+Note the known latent variable, $$ x_{T} $$, is unchanged under the motivation of diffusion in thermodynamics. Then, final objectives (Eq.[$$\ref{ddpmobjectives}$$]) is changed
+
+$$
+\begin{equation}
+\label{cddpmobjectives}
+    \mathcal{L}_{\text{simple}} := 
+    \mathbb{E}_{t, x_0|c, x_T} \Big [ \|
+        x_T - \epsilon_{\theta}(
+            \sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T, c, t
+        ) 
+    \|^2 \Big ].
+\end{equation}
+$$
+
+To implement the term, 
+$$
+    \epsilon_{\theta}(\sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T, c, t)
+$$, the authors of Stable-Diffusion introduce spatial attention mechanism in their $$\epsilon$$-predictor. Another approach is that a diffusion score computed by the $$\epsilon$$-predictor is modified as the amount of gradient of a classifier, additionally introduced (i.e., Classifier-Guidance Diffusion). 
+
+
+**I'm sorry but I do not complete this post. Please stay tuned. It will be filled completely in the near future.** 
 
 #### Keywords:
 Diffusion Probabilistic Models (DPMs), (conditional) Latent Diffusion Models (cLDMs), Classifier-Free Guidance (CFG), Dataset Generation
