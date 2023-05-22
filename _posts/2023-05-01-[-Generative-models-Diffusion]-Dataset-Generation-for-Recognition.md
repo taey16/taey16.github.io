@@ -90,16 +90,40 @@ q(x_{t-1}|x_t, x_0) =
 \end{equation}
 $$
 
-which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The author of DDMP describe to approximate $$ x_0 $$ such that:
+which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe to approximate $$ x_0 $$ such that:
 
 <p align="center">
 $$
-\begin{equation}
+\begin{equation} \label{approxx0}
     x_0 \approx \frac{x_t - \sqrt{1 - \bar{\alpha}_t}\epsilon_{\theta}(x_t)}{\sqrt{\bar{\alpha}_t}},
 \end{equation}
 $$
 </p>
 which regared to as the *"input-output reversed"* equation of Eq.[$$\ref{computediffusionforward} $$], i.e. $$ q_{\theta}(x_0 | x_t, x_T) $$. Here, $$ x_T  $$ is the output of our $$ \epsilon $$-predictor, $$ x_T = \epsilon_{\theta}(x_t) $$, where the $$ x_t $$ is an output for the previous sampling process. 
+
+
+#### Visualizing intermediate outputs step by step
+
+##### Forward diffusion process Eq.[$$\ref{computediffusionforward}$$].
+As described above, this forward process can be computed straightforwardly, since we know distribution of our observation, $$ p(x_0) $$, and latent, $$ p(x_T) $$. The right, and left-most images are $$ x_0 $$, and $$ x_T $$, respectively. Remainings are $$ x_t $$.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/qt.png">
+</p>
+
+##### Estimating $$ x_0 $$ in Eq.[$$\ref{approxx0}$$].
+To estimate the $$ x_0 $$, one needs to sample $$ x_{t} $$ which is an output of the previous reverse process in actual sampling (generation) process. However, we can make use of a result of Eq.[$$\ref{computediffusionforward}$$] computed in training for just visualization.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/x0.png">
+</p>
+
+##### Progressive estimatation of Eq.[$$\ref{ddpmsample}$$].
+Following examples are results of the Eq.[$$\ref{ddpmsample}$$]. Samples drawn from the normal distribution (left-most images) are progressively goes to corresponding samples as if they are drawn from true distribution (right-most images).
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/progressive_actually_qt.png">
+</p>
 
 #### Conditional DPMs
 
