@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Taewan Ethan Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A RESEARCH SCIENTIST<br>GenerativeAI<br>GAN/Diffusion based Generative Models<br>Implicit/Explicit Nueral Rendering<br>Vision-Multimodal Learning<br>Robot Vision"
+  bio              : "A RESEARCH SCIENTIST<br>GenerativeAI<br>Diffusion/GAN based Generative Models<br>Implicit/Explicit Nueral Rendering<br>Vision-Multimodal Learning<br>Multi-node Distributed Training<br>Robot Vision"
   location         : "Pan-Gyo, South Korea"
   email            :
   links:
