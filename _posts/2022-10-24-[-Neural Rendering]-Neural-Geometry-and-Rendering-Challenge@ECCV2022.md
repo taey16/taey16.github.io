@@ -7,7 +7,7 @@ We took part in the NGR-CO3D challenge hosted by ECCV2022. As a result, we place
 </p>
 
 #### Task Definition
-Given a sequence of RGB images, ROI-masks, and camera-poses, one's algorithm have to output appearance (RGB), depth-map (D), and ROI-mask (A) for given test camera poses for 88 video sequences in total.
+Given a sequence of RGB images, ROI-masks, and camera-poses, one's algorithm have to output appearance (RGB), depth-map (D), and ROI-mask (A) for given test camera poses for distinct 88 video sequences in total. Consequently, total number of 3D scene representation networks (NeRF in our case), should be trained, is 88.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/task_def.png" class="inline"/>
