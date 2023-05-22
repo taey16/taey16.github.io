@@ -103,7 +103,7 @@ which regared to as the *"input-output reversed"* equation of Eq.[$$\ref{compute
 #### Visualizing intermediate outputs step by step
 
 ##### Forward diffusion process Eq.[$$\ref{computediffusionforward}$$].
-As described above, this forward process can be computed straightforwardly, since we know the distribution of our observation, $$ p(x_0) $$, and latent, $$ p(x_T) $$. The right and left-most images are $$ x_0 $$, and $$ x_T $$, respectively. Remainings are $$ x_t $$.
+As described above, this forward process can be computed straightforwardly, since we know the distribution of our observation, $$ p(x_0) $$, and latent, $$ p(x_T) $$. The right and left-most images are $$ x_0 $$, and $$ x_T $$, respectively. The remainings are $$ x_t $$.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/qt.png">
@@ -117,14 +117,14 @@ To estimate the $$ x_0 $$, one needs to sample $$ x_{t} $$ which is an output of
 </p>
 
 ##### Progressive estimatation of Eq.[$$\ref{ddpmsample}$$].
-The Following examples are results of the Eq.[$$\ref{ddpmsample}$$]. Samples drawn from the normal distribution (left-most images) progressively go to corresponding samples as if they are drawn from the true distribution (right-most images).
+The following examples are results of Eq.[$$\ref{ddpmsample}$$]. Samples drawn from the normal distribution (left-most images) progressively go to corresponding samples as if they are drawn from the true distribution (right-most images).
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/progressive_actually_qt.png">
 </p>
 
 #### Conditional DPM
-The conditional DPM is a variant of the diffusion process conditioned on the class label, sgementation mask, CLIP/LAION embeddings, etc. We denote these various conditions as a random variable, $$ c $$ (for simplicity), where the true distribution of the random variable, $$ c $$, is known as a part of the observation. Then, previously mentioned Eq.[$$\ref{diffusionforward}$$] changes the form such that
+The conditional DPM is a variant of the diffusion process conditioned on the class label, segmentation mask, CLIP/LAION embeddings, etc. We denote these various conditions as a random variable, $$ c $$ (for simplicity), where the true distribution of the random variable, $$ c $$, is known as a part of the observation. Then, previously mentioned Eq.[$$\ref{diffusionforward}$$] changes the form such that
 
 \begin{align}
 \label{cdiffusionforward}
@@ -158,7 +158,7 @@ $$
 \end{equation}
 $$
 
-The Eq.[$$\ref{classifierguid}$$] could be interpreted as that a diffusion score from unconditional $$\epsilon$$-predictor is changed concidering the condition variable $$c$$ by a mount of gradient w.r.t.  $$ x_t $$ of
+The Eq.[$$\ref{classifierguid}$$] could be interpreted as that a diffusion score from unconditional $$\epsilon$$-predictor is changed considering the condition variable $$c$$ by a mount of gradient w.r.t.  $$ x_t $$ of
 $$
     \log p_{\phi}(c|x_t).
 $$
@@ -175,14 +175,14 @@ where $$w$$ is a guidance-scale constant. In this case, we could plug the QKV at
 
 
 #### Latent Diffsion Models (LDMs)
-Dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of generated image in common, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture used for reducing the dimensionarity of $$x_0$$. Specifically, a sample of $$ x_0 $$ is first pass through the encoder 
+The dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of a generated image in common, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture used for reducing the dimensionality of $$x_0$$. Specifically, a sample of $$ x_0 $$ is first pass through the encoder 
 
 $$
     f_{\text{enc}}: \mathbb{R}^{C \times H \times W} \mapsto \mathbb{R}^{C \times H^{\prime} \times W^{\prime}}, \text{where } H \gg H^{\prime}, W \gg W^{\prime},
 $$ 
 
-so that resulting dimensionarity of $$ x_0 $$ is reduced. The forward and reverse diffusion processes are conducted in $$ \mathbb{R}^{C \times H^{\prime} \times W^{\prime}} $$. In order to put back to the $$ x_t $$ to the original image space, the pretrained decoder, $$ f_{\text{dec}}: \mathbb{R}^{C \times H^\prime \times W^\prime} \mapsto \mathbb{R}^{C \times H \times W} $$, 
-is used. **We employed the LDM to implement our dataset generation for recognition task**.
+so that resulting dimensionarity of $$ x_0 $$ is reduced. The forward and reverse diffusion processes are conducted in $$ \mathbb{R}^{C \times H^{\prime} \times W^{\prime}} $$. To put back to the $$ x_t $$ to the original image space, the pretrained decoder, $$ f_{\text{dec}}: \mathbb{R}^{C \times H^\prime \times W^\prime} \mapsto \mathbb{R}^{C \times H \times W} $$, 
+is used. **We employed the LDM to implement our dataset generation for a recognition task**.
 
 #### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
 
