@@ -36,7 +36,7 @@ Here are showcases of our novel-view synthesis (order in predicted RGB, Depth, a
 [![toytrain](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/toytrain_thumb.png)](https://drive.google.com/file/d/1r_AKOPpFJJPcOle33hHel8DsoxDbHIBX/view?usp=share_link)
 
 #### Keywords:
-Neural Rendering, Neural Radiance Field (NeRF), Tensorial Radiance Field (TensoRF), Implicit Volume Rendering, Novel-View Synthesis
+Neural Rendering, Neural Radiance Field (NeRF), Tensorial Radiance Field (TensoRF), Implicit Volume Rendering, Novel-View Synthesis, 3D Reconstruction
 
 Check out our presentation slide: 
 <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/NGR_CO3D_ECCV2022.pdf">InvitedTalk_winning_entry_manyview</a>, NGR-CO3D@ECCV, 2022
