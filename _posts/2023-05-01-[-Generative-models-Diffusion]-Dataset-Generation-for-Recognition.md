@@ -149,8 +149,32 @@ $$
 
 To implement the term, 
 $$
-    \epsilon_{\theta}(\sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T, c, t)
-$$, the authors of Stable-Diffusion introduce spatial attention mechanism in their $$\epsilon$$-predictor. Another approach is that a diffusion score computed by the $$\epsilon$$-predictor is modified as the amount of gradient of a classifier, additionally introduced (i.e., Classifier-Guidance Diffusion). 
+    \epsilon_{\theta}(x_t, c) := \epsilon_{\theta}(\sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}x_T, c, t)
+$$, 
+the authors of Stable-Diffusion introduce QKV spatial attention mechanism in their $$\epsilon$$-predictor for conditioning. Another approach is that a diffusion score computed by the $$\epsilon$$-predictor is modified as the amount of gradient of a classifier, $$ p_{\phi}(c|x_t) $$, additionally introduced (i.e., Classifier-Guidance Diffusion).
+
+$$
+\begin{equation}
+\label{classifierguid}
+    \hat{\epsilon}_{\theta}(x_t, c) := \underbrace{\epsilon_{\theta}(x_t)}_{\text{unconditional part}} - \sqrt{1 - \bar{\alpha}_t} \underbrace{\nabla_{x_t} \log p_{\phi}(c | x_t)}_{\text{conditional part}}.
+\end{equation}
+$$
+
+The Eq.[$$\ref{classifierguid}$$] could be interpreted as that a diffusion score from unconditional $$\epsilon$$-predictor is changed concidering the condition variable $$c$$ by a mount of gradient w.r.t.  $$ x_t $$ of
+$$
+    \log p_{\phi}(c|x_t).
+$$
+The authors of the Classifier-Free Guidance (CFG) design their algorithm to get the *conditional part* in Eq.[$$\ref{classifierguid}$$] without explicit classifier such that:
+
+$$
+\begin{equation}
+\label{cfg}
+    \tilde{\epsilon}_{\theta}(x_t, c) := \epsilon_{\theta}(x_t) + w \big (\underbrace{\epsilon_{\theta}(x_t, c) - \epsilon_{\theta}(x_t)}_{\text{the same effect of using explicit classifier}} \big ),
+\end{equation}
+$$
+
+where $$w$$ is a guidance-scale constant. In this case, we could plug the QKV attention module of the Stable-Diffusion into the term, $$\epsilon_{\theta}(x_t, c)$$ to implement. **We utilized them to implement our dataset generation for a recognition task**.
+
 
 
 **I'm sorry but I do not complete this post. Please stay tuned. It will be filled completely in the near future.** 
