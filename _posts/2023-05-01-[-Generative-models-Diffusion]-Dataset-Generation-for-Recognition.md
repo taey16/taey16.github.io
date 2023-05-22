@@ -173,6 +173,17 @@ $$
 
 where $$w$$ is a guidance-scale constant. In this case, we could plug the QKV attention module of the Stable-Diffusion into the term, $$\epsilon_{\theta}(x_t, c)$$ to implement. **We utilized them to implement our dataset generation for a recognition task**.
 
+
+#### Latent Diffsion Models (LDMs)
+Dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of generated image in common, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture used for reducing the dimensionarity of $$x_0$$. Specifically, a sample of $$ x_0 $$ is first pass through the encoder 
+
+$$
+    f_{\text{enc}}: \mathbb{R}^{C \times H \times W} \mapsto \mathbb{R}^{C \times H^{\prime} \times W^{\prime}}, \text{where } H \gg H^{\prime}, W \gg W^{\prime},
+$$ 
+
+so that resulting dimensionarity of $$ x_0 $$ is reduced. The forward and reverse diffusion processes are conducted in $$ \mathbb{R}^{C \times H^{\prime} \times W^{\prime}} $$. In order to put back to the $$ x_t $$ to the original image space, the pretrained decoder, $$ f_{\text{dec}}: \mathbb{R}^{C \times H^\prime \times W^\prime} \mapsto \mathbb{R}^{C \times H \times W} $$, 
+is used. **We employed the LDM to implement our dataset generation for recognition task**.
+
 #### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
 
 
