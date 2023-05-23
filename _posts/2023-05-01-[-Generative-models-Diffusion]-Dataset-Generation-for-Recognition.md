@@ -33,7 +33,7 @@ Inspired by the diffusion (Brownian motion) as a natural phenomenon in thermodyn
 
 \begin{align}
 \label{diffusionforward}
-q(x_{T}, x_{t-1}, \cdots, x_{1}, x_{0}).
+q(x_{T}|x_{t-1}, x_{t-2}, \cdots, x_{1}, x_{0}).
 \end{align}
 
 The diffusion process is a special case of the Probabilistic Graphical Model (PGM), where the distribution of the latent variable is known, such that 
@@ -43,7 +43,7 @@ The diffusion process is a special case of the Probabilistic Graphical Model (PG
 x_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I}).
 \end{align}
 
-Note that distributions of $$ x_0, x_T $$ are known in this case, we can easily compute a sample in the (forward) diffusion process at time $$ t $$ such that:
+Note that distributions of $$ x_0, x_T $$ are known in the diffusion context, we can easily compute a sample in the (forward) diffusion process at time $$ t $$ such that:
 
 \begin{align}
 \label{computediffusionforward}
@@ -175,7 +175,7 @@ where $$w$$ is a guidance-scale constant. In this case, we could plug the QKV at
 
 
 #### Latent Diffsion Models (LDMs)
-The dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of a generated image in common, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture. Specifically, a sample of $$ x_0 $$ is first pass through the encoder,
+The dimensionality of the random variable, $$ x_0 $$ is the same as the resolution of a generated image, .e.g., $$ x_0 \in \mathbb{R}^{3 \times 256 \times 256} $$. Such a high dimensional space yields in difficulties to scaling up. To resolve this, the authors of Stable-Diffusion introduce a pretrained encoder-decoder architecture. Specifically, a sample of $$ x_0 $$ is first pass through the pretrained encoder,
 
 $$
     f_{\text{enc}}: \mathbb{R}^{C \times H \times W} \mapsto \mathbb{R}^{C \times H^{\prime} \times W^{\prime}}, \text{where } H \gg H^{\prime}, W \gg W^{\prime},
@@ -185,6 +185,26 @@ so that resulting dimensionarity of $$ x_0 $$ is reduced. The forward and revers
 is used. **We employed the LDM to implement our dataset generation for a recognition task**.
 
 #### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
+A common image classification task requires a training dataset which makes our likelihood, $$ p(x|c) $$, known. We define a discriminative model parameterized by $$ \phi $$, and then minimize negation of log-posterior:
+
+$$
+\begin{equation}
+    \min_{\phi}\mathcal{L}(\phi; x, c) := -\sum_i \log p_{\phi}(c_i|x_i)
+\end{equation}
+$$
+
+The posterior is proportional to the likelihood (parameterized by $$\theta$$) for a given prior,
+$$
+\begin{equation}
+    p_{\phi}(c|x) \propto p_{\theta}(x|c)p(c).
+\end{equation}
+$$
+We hypothesize that if our generator imitates sampling from true likelihood correctly for a given prior $$p(c)$$, the performaces of discriminators trained on between samples from true likelihood and $$ p_{\theta}(x|c) $$ are the same. We demonstrate our hypothesis in an application of the Face Recognition (FR).
+
+
+#### Experimental Results
+- Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousands classes (and about 500 thousands face images). First we train our generator via conditional latent diffusion with classifier-free guidance. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We donote this as synCASIA. Finally, we train two FR model with the CASIA and synCASIA.
+- Results:
 
 <!--
 **I'm sorry but I didn't have an enough time to complete this post. Please stay tuned. It will be filled completely in the near future.** 
