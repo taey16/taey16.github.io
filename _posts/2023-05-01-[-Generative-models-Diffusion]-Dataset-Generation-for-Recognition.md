@@ -206,7 +206,7 @@ $$
 - Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 500 thousand face images). First, we train our generator via conditional latent diffusion with classifier-free guidance. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (real) and synCASIA (Ours).
 - Results:
 
-| Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW   | CFPFP | CPLFW | AgeDB | CALFW | Avg.  | Gap to Real |
+| Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
 |:--------:|:--------:|:-----------------------:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
 | SynFace  | ICCV2021 | 0.5M (10K x 50)         | 91.93 | 75.03  | 70.43 | 61.63 | 74.73 | 74.75 | 26.58       |
 | DigiFace | WACV2023 | 0.5M (10K x 50)         | 95.40 | 87.40  | 78.87 | 76.97 | 78.62 | 83.45 | 13.39       |
