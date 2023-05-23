@@ -16,7 +16,7 @@ Our solution automatically processes end-users videos, and then provides an expe
 
 Order in novel-view RGB, Depth, and Surface-normal
 
-One's favorite Car
+One's favorite Car (make sure the full screen mode)
 [![test5](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test5_thumb.png)](https://drive.google.com/file/d/13ul2QUZQqrxA7fv08BoD_UDuJmsoGGc7/view?usp=share_link)
 Clothes
 [![test0](https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/test0_thumb.png)](https://drive.google.com/file/d/1lkLYecAC25GBwaWyiHZb_rHGOIXVyiEX/view?usp=share_link)
