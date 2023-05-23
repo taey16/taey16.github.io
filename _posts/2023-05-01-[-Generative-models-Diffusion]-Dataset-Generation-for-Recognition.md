@@ -199,12 +199,22 @@ $$
     p_{\phi}(c|x) \propto p_{\theta}(x|c)p(c).
 \end{equation}
 $$
-We hypothesize that if our generator imitates sampling from true likelihood correctly for a given prior $$p(c)$$, the performaces of discriminators trained on between samples from true likelihood and $$ p_{\theta}(x|c) $$ are the same. We demonstrate our hypothesis in an application of the Face Recognition (FR).
+*We hypothesize that if our generator imitates sampling from true likelihood correctly for a given prior $$p(c)$$, the performaces of discriminators trained on between samples from true likelihood and $$ p_{\theta}(x|c) $$ are the same.* We demonstrate our hypothesis in an application of the Face Recognition (FR).
 
 
 #### Experimental Results
 - Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousands classes (and about 500 thousands face images). First we train our generator via conditional latent diffusion with classifier-free guidance. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We donote this as synCASIA. Finally, we train two FR model with the CASIA and synCASIA.
 - Results:
+
+| Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW   | CFPFP | CPLFW | AgeDB | CALFW | Avg.  | Gap to Real |
+|:--------:|:--------:|:-----------------------:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
+| SynFace  | ICCV2021 | 0.5M (10K x 50)         | 91.93 | 75.03  | 70.43 | 61.63 | 74.73 | 74.75 | 26.58       |
+| DigiFace | WACV2023 | 0.5M (10K x 50)         | 95.40 | 87.40  | 78.87 | 76.97 | 78.62 | 83.45 | 13.39       |
+| DCFace   | CVPR2023 | 0.5M (10K x 50)         | 98.55 | 85.33  | 82.62 | 89.70 | 91.60 | 89.56 | 5.65        |
+| **Ours** |          | 0.5M (10K x 50)         | **99.50** | **92.97**  | **87.67**     | **92.70** | **92.40** | **93.05** | **0.52**  |
+|----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
+|----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
+| Real     |          | 0.49M <br>(10.5K x 47)      | 99.43 | 94.54  | 88.23 | 92.83 | 92.60 | 93.53 | 0.0         |
 
 <!--
 **I'm sorry but I didn't have an enough time to complete this post. Please stay tuned. It will be filled completely in the near future.** 
