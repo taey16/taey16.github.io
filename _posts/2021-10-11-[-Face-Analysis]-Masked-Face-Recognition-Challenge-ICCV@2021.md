@@ -3,6 +3,10 @@
 We entered the MFR@ICCV2021 challenge and achieved **2nd place** for the *Main task of WebFace260M track*.<br>
 Ref.: <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/papers/2021_MFR_WebFace260M_track_report.pdf">Masked Face Recognition Challenge: The WebFace260M Track Report</a>, ICCV, 2021
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/MFR_ICCV2021/certificate_mfr_iccv2021.png" width="256">
+</p>
+
 #### Task Definition
 Given the training dataset, i.e., WebFace260M, one's algorithm has to learn a good representation of face images wearing a mask as well as non-masked. An uploaded model is evaluated on the test set consisting of more than 3.3 billion pairs of a combination of masked and non-masked face images. The evaluation metric is TPR@FPR1e-5.
 
