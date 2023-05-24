@@ -88,7 +88,7 @@ q_{\theta}(x_{t-1}|x_t, x_0) =
 \end{equation}
 $$
 
-which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe approximating $$ x_0 $$ as in the Eq.[$$\ref{ddpmsample}$$] such that:
+which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe approximating $$ x_0 $$ as in Eq.[$$\ref{ddpmsample}$$] such that:
 
 <p align="center">
 $$
