@@ -221,7 +221,7 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 
 
 #### Qualitative Results
-Following results are generated face images. There is three group of images and all images in a group share the same identity condition.
+Following results are generated face images. There is three group of images, and all images in a group share the same identity condition.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/identity_group.png">
