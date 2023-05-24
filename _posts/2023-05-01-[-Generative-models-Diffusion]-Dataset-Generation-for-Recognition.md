@@ -185,7 +185,7 @@ so that resulting dimensionarity of $$ x_0 $$ is reduced. The forward and revers
 is used. *We employed the LDM to implement our dataset generation for a recognition task*.
 
 #### Identity-Preserving Face-Recognition Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
-A common image classification task requires a training dataset that makes our likelihood, $$ p(x|c) $$, known. We define a discriminative model parameterized by $$ \phi $$, and then minimize the negation of the log-posterior:
+A common image classification task requires a training dataset that makes our likelihood, $$ p(x|c) $$, and prior, $$ p(c) $$, known. We define a discriminative model parameterized by $$ \phi $$, and then minimize the negation of the log-posterior:
 
 $$
 \begin{equation}
@@ -200,7 +200,6 @@ $$
 \end{equation}
 $$
 *We hypothesize that if our generator imitates sampling from true likelihood correctly for a given prior $$p(c)$$, the performances of discriminators trained on between samples from true likelihood and $$ p_{\theta}(x|c) $$ are the same.* We demonstrate our hypothesis in an application of Face Recognition (FR).
-
 
 #### Experimental Results
 - Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 500 thousand face images). First, we train our generator via conditional latent diffusion with classifier-free guidance. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (real) and synCASIA (Ours).
