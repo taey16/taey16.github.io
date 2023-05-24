@@ -3,7 +3,7 @@
 We took part in the NGR-CO3D challenge hosted by ECCV2022. As a result, we placed the **winning entry** for the *"manyview"*-reconstruction track. 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/CO3D_Multiview_centificate.png" class="inline"/>
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/CO3D_Multiview_centificate.png" width=512>
 </p>
 
 #### Task Definition
