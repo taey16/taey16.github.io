@@ -77,4 +77,4 @@ The latent manipulation technique can be extended to **generate a face-attribute
 </p>
 
 #### Keywords:
-Generative Adverserial Networks (GANs), Dataset Generation, Face Editing, Latent Manipulation, StyleGAN, StyleFlow, StyleCLIP, StyleGAN-NADA, CLIP, LAION
+Generative Adverserial Networks (GANs), Face Editing, Latent Manipulation, StyleGAN, StyleFlow, StyleCLIP, StyleGAN-NADA, CLIP, LAION, Dataset Generation
