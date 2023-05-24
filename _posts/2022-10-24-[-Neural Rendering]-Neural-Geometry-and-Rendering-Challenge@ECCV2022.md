@@ -14,7 +14,7 @@ Given a sequence of RGB images, ROI-masks, and camera-poses, one's algorithm hav
 </p>
 
 #### Our Apporach
-We employed a simple ensemble representation of an object with the NeRF and TensoRF. To prevent overfitting phenomena, we applied per-sample-entropy, L1-sparsity, and total-variation loss to our objectives. To train all of 88 models at once, we used the Multi-node Distributed Data Parallel Package of the PyTorch.
+We employed a simple ensemble representation of an object with the NeRF and TensoRF. To prevent overfitting phenomena, we applied per-sample-entropy, L1-sparsity, and total-variation loss to our objectives. To train all of 88 models at once, we used the Multi-node Distributed Data Parallel Package shipped in the PyTorch.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/NGR_CO3D_ECCV2022/approach.png" class="inline"/>
