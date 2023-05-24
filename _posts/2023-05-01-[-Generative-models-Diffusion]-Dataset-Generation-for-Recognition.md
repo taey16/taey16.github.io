@@ -93,16 +93,16 @@ which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddp
 <p align="center">
 $$
 \begin{equation} \label{approxx0}
-    x_0 \approx \frac{x_t - \sqrt{1 - \bar{\alpha}_t}\epsilon_{\theta}(x_t)}{\sqrt{\bar{\alpha}_t}},
+    x_0 := q_{\theta}(x_0 | x_t, x_T) \approx \frac{x_t - \sqrt{1 - \bar{\alpha}_t}\epsilon_{\theta}(x_t)}{\sqrt{\bar{\alpha}_t}},
 \end{equation}
 $$
 </p>
-which regared to as a *"input-output reversed"* equation of Eq.[$$\ref{computediffusionforward} $$], i.e. $$ q_{\theta}(x_0 | x_t, x_T) $$. Here, $$ x_T  $$ is the output of our $$ \epsilon $$-predictor, $$ x_T = \epsilon_{\theta}(x_t) $$, where the $$ x_t $$ is an output for the previous sampling process. 
+which regared to as a *"input-output reversed"* equation of Eq.[$$\ref{computediffusionforward} $$]. The $$ x_T  $$ is the output of our $$ \epsilon $$-predictor, $$ x_T = \epsilon_{\theta}(x_t) $$, where the $$ x_t $$ is an output for the previous reverse sampling process at $$ t+1 $$. 
 
 
 #### Visualizing intermediate outputs step by step
 
-##### Forward diffusion process Eq.[$$\ref{computediffusionforward}$$].
+##### Forward diffusion process, Eq.[$$\ref{computediffusionforward}$$].
 As described above, this forward process can be computed straightforwardly, since we know the distribution of our observation, $$ p(x_0) $$, and latent, $$ p(x_T) $$. The right and left-most images are $$ x_0 $$, and $$ x_T $$, respectively. The remainings are $$ x_t $$.
 
 <p align="center">
