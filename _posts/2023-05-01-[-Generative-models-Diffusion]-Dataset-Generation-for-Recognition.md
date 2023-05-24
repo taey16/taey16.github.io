@@ -219,9 +219,14 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 |----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
 | Real     |          | 0.49M <br>(10.5K x 47)      | 99.43 | 94.54  | 88.23 | 92.83 | 92.60 | 93.53 | 0.0         |
 
-<!--
-**I'm sorry but I didn't have an enough time to complete this post. Please stay tuned. It will be filled completely in the near future.** 
--->
+
+#### Qualitative Results
+Following results are generated face images. There is three group of images and each group shares the same identity condition.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/identity_group.png">
+</p>
 
 #### Keywords:
 Diffusion Probabilistic Models (DPMs), conditional Diffusion Probabilistic Models (cDPMs), Latent Diffusion Models (LDMs), Classifier-Free Guidance (CFG), Dataset Generation
+
