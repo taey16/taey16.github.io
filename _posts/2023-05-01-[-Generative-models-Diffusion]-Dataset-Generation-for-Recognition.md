@@ -206,7 +206,7 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
  *if our generator imitates sampling from true likelihood correctly for a given prior* $$p(c)$$*, the performances of discriminators trained on between samples from true likelihood and* $$ p_{\theta}(x|c) $$ *are the same.* We demonstrate our hypothesis in an application of Face Recognition (FR).
 
 #### Experimental Results
-- Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 500 thousand face images). First, we train our generator via conditional latent diffusion with classifier-free guidance. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (real) and synCASIA (Ours).
+- Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 0.5 million face images in total). First, we train our generator via conditional latent diffusion with classifier-free guidance. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (real) and synCASIA (Ours).
 - Results:
 
 | Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
