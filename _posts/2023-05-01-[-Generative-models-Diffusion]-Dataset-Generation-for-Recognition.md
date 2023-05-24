@@ -221,10 +221,15 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 
 
 #### Qualitative Results
-Following results are generated face images. There is three group of images, and all images in a group share the same identity condition.
-
+The following results are examples of generated face images. All images are randomly selected (not cherry-picked). There are three groups of images, and all images in a group share the same identity condition.
+- Guidance-scale: 1.5
 <p align="center">
-<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/identity_group.png">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/identity_group_scale1.5.png">
+</p>
+
+- Guidance-scale: 2.5
+<p align="center">
+<img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/identity_group_scale2.5.png">
 </p>
 
 #### Keywords:
