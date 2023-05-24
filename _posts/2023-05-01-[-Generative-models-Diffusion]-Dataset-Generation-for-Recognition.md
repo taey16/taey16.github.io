@@ -52,7 +52,7 @@ Note that distributions of $$ x_0, x_T $$ are known in the diffusion context, we
 
 where $$ \alpha_t $$ is a constant at $$ t $$, induced by a beta-scheduler (*"linear scheduler"* as a common choice). Inherited by the PGM, the reverse diffusion process (the generation process parameterized by $$ \theta $$), which finds a likelihood,
 
-$$ q_{\theta}(x_0|x_1, x_2, \cdots, x_{t-2}, x_{t-1}, x_T) $$ 
+$$ q_{\theta}(x_0|x_1, x_2, \cdots, x_{t-2}, x_{t-1}, x_T) $$, 
 
 can be tractable. To solve this reverse process, Denoising Diffusion Probabilistic Model (DDPM) proposes the $$ q_{\theta} $$ as a $$ \epsilon $$-predictor so that the procedure in training is to be dramatically simple (under the Markov property):
 
@@ -78,7 +78,7 @@ First, we sample a latent variable $$ x_T $$ as Eq.[$$ \ref{samplelatent} $$]. T
 
 $$
 \begin{equation} \label{ddpmsample}
-q(x_{t-1}|x_t, x_0) = 
+q_{\theta}(x_{t-1}|x_t, x_0) = 
     \underbrace{
         \frac{\sqrt{\bar{\alpha}_{t-1} \beta_t}}{1 - \bar{\alpha}_t} x_0 + \frac{\sqrt{\alpha_t} (1 - \bar{\alpha}_{t-1} ) } { 1 - \bar{\alpha}_t } x_t
     }_{\mu_t(x_t, x_0)} + 
@@ -88,7 +88,7 @@ q(x_{t-1}|x_t, x_0) =
 \end{equation}
 $$
 
-which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe approximating $$ x_0 $$ such that:
+which means that if we know $$ x_0 $$, computing $$ x_{t-1} $$ of Eq.[$$\ref{ddpmsample}$$] is tractable via reparameterization trick. The authors of DDMP describe approximating $$ x_0 $$ as in the Eq.[$$\ref{ddpmsample}$$] such that:
 
 <p align="center">
 $$
