@@ -52,7 +52,11 @@ Note that distributions of $$ x_0, x_T $$ are known in the diffusion context, we
 
 where $$ \alpha_t $$ is a constant at $$ t $$, induced by a beta-scheduler (*"linear scheduler"* as a common choice). Inherited by the PGM, the reverse diffusion process (the generation process parameterized by $$ \theta $$), which finds a likelihood,
 
-$$ q_{\theta}(x_0|x_1, x_2, \cdots, x_{t-2}, x_{t-1}, x_T) $$, 
+$$
+\begin{equation}
+q_{\theta}(x_0|x_1, x_2, \cdots, x_{t-2}, x_{t-1}, x_T),
+\end{equation}
+$$ 
 
 can be tractable. To solve this reverse process, Denoising Diffusion Probabilistic Model (DDPM) proposes the $$ q_{\theta} $$ as a $$ \epsilon $$-predictor so that the procedure in training is to be dramatically simple (under the Markov property):
 
