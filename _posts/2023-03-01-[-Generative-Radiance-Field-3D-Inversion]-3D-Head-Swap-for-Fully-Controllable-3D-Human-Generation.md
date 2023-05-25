@@ -28,4 +28,4 @@ https://www.fabriziomusacchio.com/blog/2021-08-10-How_to_use_LaTeX_in_Markdown/
 #### Introduction
 
 #### Keywords:
-Generative Radiance Fields, 3D-aware GANs, Dual-Inversion, Controllable Full-Body Avata Generation
+Generative Radiance Fields, 3D-aware GANs, Dual-Inversion, Controllable Full-Body Avatar Generation
