@@ -35,7 +35,7 @@ Modeling 3D face and body research are essential components to realize a control
 </p>
 Results of our apporach.
 
-*Note that this work is under review, Why don't you feel free to email me for details*
+*Note that this work is under review. Feel free to email me for details*
 
 #### Keywords:
 Neural Radiance Fields (NeRF), Generative Radiance Fields, Deformable Radiance Fields, 3D-aware GANs, 3D Inversion, Controllable Full-Body Avatar Generation
