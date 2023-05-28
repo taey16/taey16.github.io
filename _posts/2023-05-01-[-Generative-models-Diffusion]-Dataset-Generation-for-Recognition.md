@@ -211,7 +211,7 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 
 #### Experimental Results
 - Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 0.5 million face images in total) as our target dataset to train our generator and face recognition network. First, we train our generator via conditional latent diffusion with classifier-free guidance as described above. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (Real) and synCASIA (Ours).
-- Results:
+- Results: (10K x 50)
 
 | Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
 |:--------:|:--------:|:-----------------------:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
@@ -222,6 +222,17 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 |----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
 |----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
 | Real     |          | 0.49M <br>(10.5K x 47)      | 99.43 | 94.54  | 88.23 | 92.83 | 92.60 | 93.53 | 0.0         |
+
+
+- Results: (10K x 100)
+
+| Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
+|:--------:|:--------:|:-----------------------:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
+| DigiFace | WACV2023 | 1.2M (10K×72 + 100K×5) | 96.17 | 89.81 | 82.23 | 81.10 | 82.55 | 86.37 | 9.55 |
+| DCFace   | CVPR2023 | 1.0M (20K×50)          | 98.83 | 88.40 | 84.22 | 90.45 | **92.38** | 90.86 | 4.14 |
+|----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
+|----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
+| Ours     |          | 1.0M (10K×100)         | **99.43** | **94.11** | **88.57** | **91.50** | 92.17 | **93.16** | **0.40** |
 
 
 #### Qualitative Results
