@@ -10,9 +10,11 @@ We build a large-scale visual search system that finds similar clothe-images giv
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/fashion/fashion_result1.png">
 </p>
 
+Much more examples including qualitative results are described in our paper.
+
 
 #### Keywords:
-Multi-label Classification, Vision-Language, Sequence Generation (LSTM), Fashion Search
+Multi-label Classification, Vision-Encoder/Language-Decoder, Sequence (Sentence) Generation, Inception Network, LSTM, Fashion Search
 
 Check out our paper for further details: <br>
 <a href="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/papers/2016_fashion.pdf">Visual Fashion-Product Search at SK Planet</a>, CoRR abs/1609.07859, 2016
