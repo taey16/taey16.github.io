@@ -211,7 +211,7 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 
 #### Experimental Results
 - Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 0.5 million face images in total) as our target dataset to train our generator and face recognition network. First, we train our generator via conditional latent diffusion with classifier-free guidance as described above. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (Real) and synCASIA (Ours).
-- Results: (10K x 50)
+- **Results for 0.5M (10K x 50) images generated**
 
 | Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
 |:--------:|:--------:|:-----------------------:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
@@ -224,7 +224,7 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 | Real     |          | 0.49M <br>(10.5K x 47)      | 99.43 | 94.54  | 88.23 | 92.83 | 92.60 | 93.53 | 0.0         |
 
 
-- Results: (10K x 100)
+- **Results for 1.0M (10K x 100) images generated**
 
 | Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
 |:--------:|:--------:|:-----------------------:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
@@ -233,6 +233,13 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesi
 |----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
 |----------|----------|-------------------------|-------|--------|-------|-------|-------|-------|-------------|
 | Ours     |          | 1.0M (10K×100)         | **99.43** | **94.11** | **88.57** | **91.50** | 92.17 | **93.16** | **0.40** |
+
+- **Results for 2.0M (CASIA + synCASIA)**
+
+| Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
+|:--------:|:--------:|:-----------------------:|:---:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
+| Real Only|               | 0.49M <br>(10.5K x 47)   | 99.43 | 94.54  | 88.23 | 92.83 | 92.60 | 93.53 | 0.0         |
+| Real + synCASIA (Ours)|  | 1.0M <br>(20K x 50)      | **99.43** | **95.54**  | **89.70** | **93.83** | **93.03** | **94.23** | **-0.75**         |
 
 
 #### Qualitative Results
