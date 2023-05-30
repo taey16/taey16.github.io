@@ -206,8 +206,8 @@ $$
 \end{equation}
 $$
 
-This Bayes rule, Eq.($$\ref{bayesrule}$$), natually induces our simple hypothesis i.e., 
- *if our generator imitates sampling from true likelihood correctly for a given prior* $$p(c)$$*, the performances of discriminators trained on between samples from true likelihood and* $$ p_{\theta}(x|c) $$ *are the same.* We demonstrate our hypothesis in an application of Face Recognition (FR). The reason behind choosing FR domain is that the FR is a openset metric learning task (also regareded to as a zero-shot learning task).
+This Bayes rule, Eq.($$\ref{bayesrule}$$), naturally induces our simple hypothesis i.e., 
+ *if our generator imitates sampling from true likelihood correctly for a given prior* $$p(c)$$*, the performances of discriminators trained on between samples from true likelihood and* $$ p_{\theta}(x|c) $$ *are the same.* We demonstrate our hypothesis in an application of Face Recognition (FR). The reason behind choosing the FR domain is that the FR is an open-set metric learning task (also regarded as a zero-shot learning task).
 
 #### Experimental Results
 - Experimental Settings: We choose the CASIA-webface dataset (CASIA) composed of about 10 thousand classes (and about 0.5 million face images in total) as our target dataset to train our generator and face recognition network. First, we train our generator via conditional latent diffusion with classifier-free guidance as described above. And then, given the same prior as the CASIA, we sample face images whose number is the same as the CASIA. We denote this as synCASIA. Finally, we train two FR models with the CASIA (Real) and synCASIA (Ours).
@@ -253,6 +253,8 @@ The following results are examples of generated face images. All images are rand
 <p align="center">
 <img src="https://raw.githubusercontent.com/taey16/taey16.github.io/main/assets/diffusion/identity_group_scale2.5.png">
 </p>
+
+**Note that we have got started to extend our hypothesis into various vision tasks such as classification, text-vision joint embedding, etc.**
 
 #### Keywords:
 Diffusion Probabilistic Models (DPMs), conditional Diffusion Probabilistic Models (cDPMs), Latent Diffusion Models (LDMs), Classifier-Free Guidance (CFG), Dataset Generation
