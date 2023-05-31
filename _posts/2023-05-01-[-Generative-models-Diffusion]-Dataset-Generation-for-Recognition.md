@@ -189,7 +189,7 @@ so that resulting dimensionarity of $$ x_0 $$ is reduced. The forward and revers
 is used. *We employed the LDM to implement our dataset generation for a recognition task*.
 
 #### A Dataset Generation via Conditional Diffusion Probabilistic Models (Ongoing)
-A common image classification task requires a training dataset that makes our likelihood, $$ p(x|c) $$, and prior, $$ p(c) $$, known. We define a discriminative model parameterized by $$ \phi $$, and then minimize the negation of the log-posterior:
+A common image classification task requires a training dataset that makes our likelihood, $$ p(x|c) $$, and prior, $$ p(c) $$, known. We define a discriminative model parameterized by $$ \phi $$, and then minimize following empricial risk (i.e., the negation of the log-posterior) across samples:
 
 $$
 \begin{equation}
