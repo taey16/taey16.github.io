@@ -239,7 +239,7 @@ This Bayes rule, Eq.($$\ref{bayesrule}$$), naturally induces our simple hypothes
 | Methods  | Venue    | #images <br>(#IDs x imgs/ID) | LFW$$\uparrow$$  |CFPFP$$\uparrow$$| CPLFW$$\uparrow$$ | AgeDB$$\uparrow$$ | CALFW$$\uparrow$$ | Avg.$$\uparrow$$ | Gap to Real$$\downarrow$$ |
 |:--------:|:--------:|:-----------------------:|:---:|:------:|:-----:|:-----:|:-----:|:-----:|:-----------:|
 | Real Only|               | 0.49M <br>(10.5K x 47)   | 99.43 | 94.54  | 88.23 | 92.83 | 92.60 | 93.53 | 0.0         |
-| Real + synCASIA (Ours)|  | 1.0M <br>(20K x 50)      | **99.43** | **95.54**  | **89.70** | **93.83** | **93.03** | **94.23** | **-0.75**         |
+| Real + synCASIA (Ours)|  | 1.0M <br>(20K x 50)      | **99.63** | **95.51**  | **90.27** | **93.53** | **93.33** | **94.46** | **-0.99**         |
 
 
 #### Qualitative Results
